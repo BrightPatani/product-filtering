@@ -3,11 +3,25 @@ document.addEventListener('DOMContentLoaded', function () {
     const filters = document.querySelectorAll('.check');
     const products = document.querySelectorAll('.item');
     const searchInput = document.getElementById('search');
+    const cartCounts = document.getElementById('cart-count');
+    let cartCount = 0; 
+
+
+    const addToCartButtons = document.querySelectorAll('.item-btn');
+
+    addToCartButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        cartCount++; 
+        cartCounts.textContent = cartCount; 
+      });
+    });
 
     // Filter products
     filters.forEach(filter => {
       filter.addEventListener('change', filterProducts);
     });
+
+   
 
     //search input
     searchInput.addEventListener('input', filterProducts);
