@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Food Products</title>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+    <nav class="bg-green-700 p-4 mb-8 shadow-lg">
+      <div class="container max-w-6xl mx-auto flex justify-between items-center">
+        <div class="relative w-full sm:w-1/2">
+          <input
+            type="text"
+            id="search"
+            class="bg-white rounded-full p-4 pl-12 w-full focus:outline-none focus:ring-2 focus:ring-green-400"
+            placeholder="Search fruits..."
+          />
+          <svg
+            class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2"
+            stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+            <path d="M21 21l-6 -6" />
+          </svg>
+        </div>
+  
+        <div class="relative">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"fill="none" 
+          stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z"
+            />
+            <path d="M9 11v-5a3 3 0 0 1 6 0v5" />
+          </svg>
+          <small
+            id="cart-count"
+            class="bg-red-500 text-xs text-white w-5 h-5 absolute -top-2 -right-2 rounded-full flex items-center justify-center"
+            >0</small>
+        </div>
+      </div>
+    </nav>
+  
+
+    <main class="container mx-auto flex flex-col md:flex-row max-w-6xl gap-8">
+      <aside class="bg-white p-6 rounded-lg shadow-md w-full md:max-w-xs">
+        <h2 class="text-2xl font-semibold mb-4">Filters</h2>
+        <h3 class="text-lg mb-2">Category</h3>
+        <div id="filter-container" class="space-y-2">
+          <div>
+            <input type="checkbox" class="check" id="all" checked/>
+            <label for="all" class="ml-2 text-lg">All</label>
+          </div>
+          <div>
+            <input type="checkbox" class="check" id="citrus" />
+            <label for="citrus" class="ml-2 text-lg">Citrus</label>
+          </div>
+          <div>
+            <input type="checkbox" class="check" id="berries" />
+            <label for="berries" class="ml-2 text-lg">Berries</label>
+          </div>
+          <div>
+            <input type="checkbox" class="check" id="tropical" />
+            <label for="tropical" class="ml-2 text-lg">Tropical</label>
+          </div>
+        </div>
+      </aside>
+  
+      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div class="item berries bg-white p-4 rounded-lg shadow-lg group hover:shadow-2xl transition">
+          <img src="redcurrant.jpg" alt="Redcurrant" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-lg font-semibold">Redcurrant</h3>
+          <p class="text-gray-500">Berries</p>
+          <p class="font-bold text-lg text-green-700">$4.60 per pack</p>
+          <button class="bg-green-800 text-white px-4 py-2 rounded-full mt-4 opacity-0 group-hover:opacity-100 transition">Add to Cart</button>
+        </div>
+        <div class="item citrus bg-white p-4 rounded-lg shadow-lg group hover:shadow-2xl transition">
+          <img src="orange.jpg" alt="Orange" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-lg font-semibold">Orange</h3>
+          <p class="text-gray-500">Citrus</p>
+          <p class="font-bold text-lg text-green-700">$2.50 each</p>
+          <button class="bg-green-800 text-white px-4 py-2 rounded-full mt-4 opacity-0 group-hover:opacity-100 transition">Add to Cart</button>
+        </div>
+        <div class="item berries bg-white p-4 rounded-lg shadow-lg group hover:shadow-2xl transition">
+          <img src="strawberry.jpg" alt="Strawberry" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-lg font-semibold">Strawberry</h3>
+          <p class="text-gray-500">Berries</p>
+          <p class="font-bold text-lg text-green-700">$3.00 per pack</p>
+          <button class="bg-green-800 text-white px-4 py-2 rounded-full mt-4 opacity-0 group-hover:opacity-100 transition">Add to Cart</button>
+        </div>
+        <div class="item citrus bg-white p-4 rounded-lg shadow-lg group hover:shadow-2xl transition">
+          <img src="grapefruit.jpg" alt="Grapefruit" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-lg font-semibold">Grapefruit</h3>
+          <p class="text-gray-500">Citrus</p>
+          <p class="font-bold text-lg text-green-700">$2.50 each</p>
+          <button class="bg-green-800 text-white px-4 py-2 rounded-full mt-4 opacity-0 group-hover:opacity-100 transition">Add to Cart</button>
+        </div>
+        <div class="item tropical bg-white p-4 rounded-lg shadow-lg group hover:shadow-2xl transition">
+            <img src="coconut.jpg" alt="Coconut" class="w-full h-40 object-cover rounded-lg mb-4">
+            <h3 class="text-lg font-semibold">Coconut</h3>
+            <p class="text-gray-500">Tropical</p>
+            <p class="font-bold text-lg text-green-700">$5.00 each</p>
+            <button class="bg-green-800 text-white px-4 py-2 rounded-full mt-4 opacity-0 group-hover:opacity-100 transition">Add to Cart</button>
+          </div>
+          <div class="item berries bg-white p-4 rounded-lg shadow-lg group hover:shadow-2xl transition">
+            <img src="blackberries.jpg" alt="blackberries" class="w-full h-40 object-cover rounded-lg mb-4">
+            <h3 class="text-lg font-semibold">Blackberries</h3>
+            <p class="text-gray-500">Berries</p>
+            <p class="font-bold text-lg text-green-700">$7.30 per pack</p>
+            <button class="bg-green-800 text-white px-4 py-2 rounded-full mt-4 opacity-0 group-hover:opacity-100 transition">Add to Cart</button>
+          </div>
+          <div class="item tropical bg-white p-4 rounded-lg shadow-lg group hover:shadow-2xl transition">
+            <img src="pineapple.jpg" alt="Pineapple" class="w-full h-40 object-cover rounded-lg mb-4">
+            <h3 class="text-lg font-semibold">Pineapple</h3>
+            <p class="text-gray-500">Tropical</p>
+            <p class="font-bold text-lg text-green-700">$4.00 each</p>
+            <button class="bg-green-800 text-white px-4 py-2 rounded-full mt-4 opacity-0 group-hover:opacity-100 transition">Add to Cart</button>
+          </div>
+          <div class="item citrus bg-white p-4 rounded-lg shadow-lg group hover:shadow-2xl transition">
+            <img src="lemon.jpg" alt="Lemon" class="w-full h-40 object-cover rounded-lg mb-4">
+            <h3 class="text-lg font-semibold">Lemon</h3>
+            <p class="text-gray-500">Citrus</p>
+            <p class="font-bold text-lg text-green-700">$1.50 each</p>
+            <button class="bg-green-800 text-white px-4 py-2 rounded-full mt-4 opacity-0 group-hover:opacity-100 transition">Add to Cart</button>
+          </div>
+          <div class="item tropical bg-white p-4 rounded-lg shadow-lg group hover:shadow-2xl transition">
+            <img src="papaya.jpg" alt="Papaya" class="w-full h-40 object-cover rounded-lg mb-4">
+            <h3 class="text-lg font-semibold">Papaya</h3>
+            <p class="text-gray-500">Tropical</p>
+            <p class="font-bold text-lg text-green-700">$3.20 each</p>
+            <button class="bg-green-800 text-white px-4 py-2 rounded-full mt-4 opacity-0 group-hover:opacity-100 transition">Add to Cart</button>
+          </div>
+          <div class="item berries bg-white p-4 rounded-lg shadow-lg group hover:shadow-2xl transition">
+            <img src="blueberry.jpg" alt="Blueberry" class="w-full h-40 object-cover rounded-lg mb-4">
+            <h3 class="text-lg font-semibold">Blueberry</h3>
+            <p class="text-gray-500">Berries</p>
+            <p class="font-bold text-lg text-green-700">$3.50 per pack</p>
+            <button class="bg-green-800 text-white px-4 py-2 rounded-full mt-4 opacity-0 group-hover:opacity-100 transition">Add to Cart</button>
+          </div>
+          <div class="item Tropical bg-white p-4 rounded-lg shadow-lg group hover:shadow-2xl transition">
+            <img src="guava.jpg" alt="Guava" class="w-full h-40 object-cover rounded-lg mb-4">
+            <h3 class="text-lg font-semibold">Guava</h3>
+            <p class="text-gray-500">Tropical</p>
+            <p class="font-bold text-lg text-green-700">$1.50 each</p>
+            <button class="bg-green-800 text-white px-4 py-2 rounded-full mt-4 opacity-0 group-hover:opacity-100 transition">Add to Cart</button>
+          </div>
+      </section>
+    </main>
+  
+ 
+    <script src="app.js"></script>
+  </body>
+  </html>
